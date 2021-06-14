@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Class loads MusicEvent data from a formatted JSON (JavaScript Object Notation) file.
+ * Class loads MusicEvent data from a formatted JSON file.
  * Populates data model (MusicEvent) with data.
  */
 
@@ -27,7 +27,6 @@ public class JSONLoader {
     public static List<MusicEvent> loadJSONFromAsset(Context context) throws IOException {
         List<MusicEvent> allMusicEvents = new ArrayList<>();
         String json;
-            //TODO: Complete the file name
             InputStream is = context.getAssets().open("MusicEvents.json");
             int size = is.available();
             byte[] buffer = new byte[size];
@@ -37,7 +36,6 @@ public class JSONLoader {
 
         try {
             JSONObject jsonRootObject = new JSONObject(json);
-            //TODO: Complete the name of the root object in the JSON file
             JSONArray allMusicEventsJSON = jsonRootObject.getJSONArray("MusicEvents");
             int numberOfEvents = allMusicEventsJSON.length();
 

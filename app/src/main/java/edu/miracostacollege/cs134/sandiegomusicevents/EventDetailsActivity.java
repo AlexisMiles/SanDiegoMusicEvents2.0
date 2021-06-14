@@ -12,6 +12,7 @@ import android.widget.TextView;
 import java.io.IOException;
 import java.io.InputStream;
 
+// Activity that displays details of a selected Music Event
 public class EventDetailsActivity extends AppCompatActivity {
 
 

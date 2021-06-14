@@ -21,12 +21,9 @@ import edu.miracostacollege.cs134.sandiegomusicevents.model.MusicEvent;
 
 public class MusicEventListAdapter extends ArrayAdapter<MusicEvent> {
 
-    //Declare member variables to store the parameters (context, resource id, List of <MusicEvent>)
     private Context mContext;
     private int mResourceId;
     private List<MusicEvent> mAllEvents;
-
-    //This constructor is being called by MainActivity
 
     public MusicEventListAdapter(Context context, int resource, @NonNull List<MusicEvent> objects){
         super(context, resource, objects);
@@ -35,14 +32,11 @@ public class MusicEventListAdapter extends ArrayAdapter<MusicEvent> {
         mAllEvents = objects;
     }
 
-    //In order to bridge the View (music_event_list_item) with the Model (MusicEvent), we override:
-    //Ctrl + o to Override
-
-
+    //In order to bridge the View (music_event_list_item) with the Model (MusicEvent)
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        // Inflate out custom layout from List<MusicEvent>
+        // Inflate custom layout from List<MusicEvent>
         MusicEvent focusedEvent = mAllEvents.get(position);
 
         //Manually inflate the custom layout

@@ -5,9 +5,6 @@ package edu.miracostacollege.cs134.sandiegomusicevents.model;
  * occurring within San Diego County.  Currently, two arrays contain the data: one array
  * stores the titles of each upcoming music event, while the other maintains the details
  * about the event.
- *
- * @author Michael Paulding
- * @version 2.0
  */
 public class MusicEvent {
 
